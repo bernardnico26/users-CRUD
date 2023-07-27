@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Libre Franklin', sans-serif;
+}
+.create-user-section{
+  display: flex;
+  justify-content: end;
+  width: 30%;
+}
+.create-user-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  gap: 5px;
+  background-color: steelblue;
+  color: white;
+  font-size: 10px;
+}
+.create-user-button:hover{
+  transform: scale(1.1);
+}
+.create-user-button span{
+  font-size: 20px;
+}
+.create-user-button:hover span{
+  animation: giroInfinito 2.5s linear infinite;
+}
+@keyframes giroInfinito {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.user-list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}  
+.principal-section{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+.user-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    gap: 30px;
+}
+.user-list ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  gap: 35px ;
+  
+}
+.name-section{
+  display: flex;
+  justify-content: center;
+}
+.user-dates{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 15px;
+}
+.user-list ul li h3{
+  color:#353232;
+}
+.user-list ul li h5{
+  color: slategrey;
+}
+.cardbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.background-delete{
+  display: flex;
+  justify-content: center;
+  background-color:wheat;
+  width: 40px;
+  border-radius: 50%;
+}
+.delete-button{
+background: url(/src/assets/img/cesto-sprite.png) no-repeat;
+display: inline-block;
+left: 25%;
+width: 20px;
+height: 40px;
+background-position: 0px 0;
+border-radius: 50%;
+}
+.delete-button:hover{
+  background-position: -20px 0;
+}
+.edit-button{
+  display: flex;
+  justify-content: center;
+  background-color:wheat;
+  max-width: 40px;
+  border-radius: 50%;
+}
+.editfont{
+  font-size: 20px;
+}
+.editfont:hover{
+  animation: rotacionIdaYVuelta 0.5s infinite ;
+}
+@keyframes rotacionIdaYVuelta {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.cardbuttons button{
+    padding: 10px;
+}
+.modal-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(169, 169, 169, 0.719);
+  width: 100%;
+  height: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color:#d8e0e0;
+  box-shadow: 5px -5px 0px rgb(40, 71, 97);  
+  padding: 10px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.principal-section-form{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+.inputs-section{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 90%;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #63728d;
+  box-shadow: inset -4px 3px 0px 0px darkgray;
+  width: 100%;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.principal-section-form{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.principal-section-form h3{
+  font-size: 17px;
+}
+.close-button-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.close-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color:dimgrey;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.submit-section{
+  display: flex;
+  justify-content: center;
+}
+.submit-button{
+  background-color: steelblue;
+  color: white;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.submit-button.loading:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
+  transform: translateX(-100%);
+  transition: Loaderbar 4s linear;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4caf50;
+  
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4caf50;
+  animation: loaderbar 4s infinite;
+}
+@keyframes loaderbar {
+  0% {
+    left: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+/*pop-up*/
+
+.pop-up-section{
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top:85%;
+}
+.pop-up {
+  width: 70%;
+  margin-right: 20px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  height: 100%;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.pop-up.success {
+  background-color: #4caf50;
+}
+
+.pop-up.error {
+  background-color: #f44336;
+}
+
+
+  /*medias**/
+
+  @media screen and (min-width: 280px) {
+    form{
+      box-shadow: 15px -10px 0px #284761;
+  }
+  }
+  @media screen and (min-width: 400px) {
+    .principal-section{
+      padding: 0 20px;
+    }
+    .create-user-button{
+      gap:10px;
+      font-size: 15px;
+    }
+    .user-list ul li {
+      width: 80%;
+      padding: 15px;
+    }
+    .name-section{
+      font-size: 18px;
+    }
+    .user-dates{
+      font-size: 18px;
+      gap: 45px;
+      margin-left: 20;
+  }
+  }
+  @media screen and (min-width: 500px) {
+    .pop-up {
+      width: 60%;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .create-user-button{
+      width: 171px;
+      gap:25px;
+      font-size: 20px;
+    }
+    .create-user-button span{
+      font-size: 30px;
+    }
+    .user-list ul li {
+      width: 40%;
+      padding: 20px;
+    }
+    .cardbuttons{
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+  }
+    .input-container {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .pop-up {
+      width: 40%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .principal-section{
+      padding: 0 40px;
+      font-size: 20px;
+    }
+    .user-list ul li {
+      width: 27%;
+    }
+    .cardbuttons{
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+    }
+    .input-container {
+      margin-bottom: 10px;
+    }
+    .pop-up {
+      width: 30%;
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    .principal-section{
+      padding: 0 80px;
+      font-size: 25px;
+    }
+    .pop-up {
+      width: 25%;
+    }
+  }
+@media screen and (min-width: 1320px) {
+  .user-list ul li {
+    padding: 25px;
+  }
+  h2{
+    font-size: 35px;
+  }
+  .user-dates{
+    font-size: 22px;
+  }
+  .pop-up {
+    font-size: 18px;
+  }
+  .close-pop-up{
+    font-size: 18px;
+  }
+}
