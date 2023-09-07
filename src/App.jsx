@@ -15,7 +15,7 @@ function App() {
 
   const getAllUsers = () => {
     axios
-      .get(`https://users-crud.academlo.tech/users/`)
+      .get(`https://users-crud-mdw3.onrender.com/users`)
       .then(resp => setUsersList(resp.data))
       .catch(error => console.error(error))
   }
@@ -26,7 +26,7 @@ function App() {
 
   const addUser = newUser => {
     axios
-      .post(`https://users-crud.academlo.tech/users/`, newUser)
+      .post(`https://users-crud-mdw3.onrender.com/users`, newUser)
       .then(() => {
         getAllUsers()
         setUserSelected(undefined)
@@ -45,7 +45,7 @@ function App() {
 
   const deleteUser = id => {
     axios
-      .delete(`https://users-crud.academlo.tech/users/${id}/`)
+      .delete(`https://users-crud-mdw3.onrender.com/users/${id}/`)
       .then(() => {
         getAllUsers()
         setPopUpMessage('Usuario eliminado exitosamente');
@@ -67,7 +67,7 @@ function App() {
 
   const editUser = user => {
     axios
-      .put(`https://users-crud.academlo.tech/users/${user.id}/`, user)
+      .put(`https://users-crud-mdw3.onrender.com/users/${user.id}/`, user)
       .then(() => {
         getAllUsers()
         setUserSelected(undefined)
