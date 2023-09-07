@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { useEffect,useState} from 'react'
 
 
-const UsersForm = ({addUser, userSelected, editUser, closeModal, setShowFormModal, setShowPopUp, setPopUpMessage, setPopUpType}) => {
+const UsersForm = ({addUser, userSelected, editUser, closeModal, setShowPopUp, setPopUpMessage, setPopUpType}) => {
 
     const { register, handleSubmit, reset} = useForm()
     const [loading, setLoading] = useState(false)
