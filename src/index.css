@@ -146,6 +146,8 @@ border-radius: 50%;
 form {
   display: flex;
   flex-direction: column;
+  
+    height: 50%;
   background-color:#d8e0e0;
   box-shadow: 5px -5px 0px rgb(40, 71, 97);  
   padding: 10px;
@@ -323,10 +325,15 @@ button {
       gap: 45px;
       margin-left: 20;
   }
+  
   }
   @media screen and (min-width: 500px) {
     .pop-up {
       width: 60%;
+    }
+    form{
+      width: 60%;
+      height: 50%;
     }
   }
   @media screen and (min-width: 600px) {
@@ -351,9 +358,13 @@ button {
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     .pop-up {
       width: 40%;
+    }
+    form{
+      width: 50%;
+      height: 60%;
     }
   }
   @media screen and (min-width: 1024px) {
@@ -375,6 +386,10 @@ button {
     .pop-up {
       width: 30%;
     }
+    form{
+      width: 40%;
+      height: 60%;
+    }
   }
   @media screen and (min-width: 1170px) {
     .principal-section{
@@ -383,6 +398,10 @@ button {
     }
     .pop-up {
       width: 25%;
+    }
+    form{
+      width: 35%;
+      
     }
   }
 @media screen and (min-width: 1320px) {
@@ -400,5 +419,9 @@ button {
   }
   .close-pop-up{
     font-size: 18px;
+  }
+  form{
+    width: 30%;
+    
   }
 }
