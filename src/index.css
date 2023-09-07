@@ -366,6 +366,11 @@ button {
       width: 50%;
       height: 60%;
     }
+    .close-button{
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+    }
   }
   @media screen and (min-width: 1024px) {
     .principal-section{
@@ -417,11 +422,13 @@ button {
   .pop-up {
     font-size: 18px;
   }
-  .close-pop-up{
-    font-size: 18px;
-  }
   form{
     width: 30%;
     
+  }
+  .close-button{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
   }
 }
